@@ -113,3 +113,50 @@ section.skills ul li::before {
   color: #0a74da;
   font-weight: bold;
 }
+section.projects {
+  background: #fff;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 25px 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+section.projects h2 {
+  color: #27ae60;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  border-bottom: 3px solid #27ae60;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.project {
+  margin-bottom: 25px;
+}
+
+.project h3 {
+  margin: 10px 0 6px;
+  font-size: 22px;
+  color: #34495e;
+}
+
+.project p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.project a {
+  color: #27ae60;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
