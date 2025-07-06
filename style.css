@@ -188,9 +188,11 @@ section.socials h2 {
 }
 
 .social-icons img {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.2s;
+  width: 28px;
+  height: 28px;
+  margin: 0 12px;
+  vertical-align: middle;
+  transition: transform 0.2s ease-in-out;
 }
 
 .social-icons img:hover {
