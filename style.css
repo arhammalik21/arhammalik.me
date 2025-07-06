@@ -46,3 +46,47 @@ section ul li {
 section ul li:last-child {
   border-bottom: none;
 }
+/* Style the Skills Section */
+section.skills {
+  background: #ffffff;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section.skills h2 {
+  color: #0a74da;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #0a74da;
+  padding-bottom: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+section.skills ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+section.skills ul li {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 18px;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 24px;
+}
+
+section.skills ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #0a74da;
+  font-weight: bold;
+}
