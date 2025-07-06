@@ -198,3 +198,40 @@ section.socials h2 {
 .social-icons img:hover {
   transform: scale(1.1);
 }
+section.achievements {
+  background: #fff;
+  max-width: 700px;
+  margin: 30px auto 50px auto;
+  padding: 25px 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+section.achievements h2 {
+  color: #c0392b;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  border-bottom: 3px solid #d35400;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+section.achievements ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+section.achievements ul li {
+  font-size: 18px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ecf0f1;
+  color: #34495e;
+}
+
+section.achievements ul li:last-child {
+  border-bottom: none;
+}
