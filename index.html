@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arham Malik - Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <!-- AOS Library CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -13,13 +15,13 @@
     <h1>Arham Malik</h1>
     <p>Cloud & DevOps Enthusiast | BTech Electrical Engineering</p>
   </header>
-  <section class="about-me">
+  <section class="about-me" data-aos="fade-up">
   <h2>About Me</h2>
   <p>Hello! I’m Arham Malik, passionate about cloud computing, DevOps, and automation.  
      I enjoy building projects using Google Cloud Platform and AWS, and I’m continuously learning new technologies to sharpen my skills.  
      Besides tech, I’m an avid basketball player and a team leader.</p>
 </section>
-  <section class="projects">
+  <section class="projects" data-aos="fade-left">
   <h2>Projects</h2>
 
   <div class="project">
@@ -50,7 +52,7 @@
     <p>Planning to build small automation tools and cloud-related scripts using Python and Bash. These mini-projects will help solidify my backend and DevOps knowledge.</p>
   </div>
 </section>
-  <section class="skills">
+  <section class="skills" data-aos="fade-right">
   <h2>Skills</h2>
   <ul>
     <li>
@@ -71,7 +73,7 @@
     </li>
   </ul>
 </section>
-  <section class="achievements">
+  <section class="achievements" data-aos="zoom-in">
   <h2>Achievements</h2>
   <ul>
     <li>🖥️ Served as Secretary IT in Sulaiman Hall, managing IT initiatives and events.</li>
@@ -82,7 +84,7 @@
     <li>📈 Improved my skills in cloud computing, DevOps, and automation through continuous learning.</li>
   </ul>
 </section>
-  <section class="socials">
+ <section class="socials" data-aos="fade-up">
   <h2>Connect with Me</h2>
   <div class="social-icons">
     <a href="https://github.com/arhammalik21" target="_blank">
@@ -96,6 +98,14 @@
     </a>
   </div>
 </section>
+  <!-- AOS Library JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,  // animation duration in ms
+    once: true       // animate only once
+  });
+</script>
 
 </body>
 </html>
