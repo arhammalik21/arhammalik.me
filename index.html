@@ -12,7 +12,7 @@
 <body>
   <header>
     <img src="Photo.png" alt="Arham Malik" style="width:150px; height:150px; border-radius: 50%;">
-    <h1>Arham Malik</h1>
+    <h1>Arham Malik <span id="typed-text"></span></h1>
     <p>Cloud & DevOps Enthusiast | BTech Electrical Engineering</p>
   </header>
   <section class="about-me" data-aos="fade-up">
@@ -106,6 +106,25 @@
     once: true       // animate only once
   });
 </script>
+  <!-- Typed.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+
+  var typed = new Typed("#typed-text", {
+    strings: ["Arham Malik", "a Cloud Enthusiast", "a Problem Solver", "a Basketball Player"],
+    typeSpeed: 60,
+    backSpeed: 30,
+    backDelay: 1000,
+    loop: true,
+    showCursor: true,
+    cursorChar: "|"
+  });
+</script>
+
 
 </body>
 </html>
