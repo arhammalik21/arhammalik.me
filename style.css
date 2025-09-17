@@ -72,7 +72,7 @@ section ul li {
 section ul li:last-child {
   border-bottom: none;
 }
-/* Style the Skills Section */
+
 section.skills {
   background: #ffffff;
   max-width: 700px;
@@ -306,7 +306,7 @@ section.achievements ul li {
 section.achievements ul li:hover {
   background: #f0f0f0;
 }
-/* Responsive Layout for Mobile Devices */
+
 @media (max-width: 768px) {
   body {
     padding: 10px;
@@ -353,7 +353,7 @@ h1 {
 }
 
 #typed-text {
-  color: #27ae60; /* Make the animated text green */
+  color: #27ae60; 
 }
 .footer {
   text-align: center;
