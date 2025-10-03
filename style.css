@@ -223,17 +223,18 @@ section.projects h2 {
 }
 
 section.Experience {
-  background: #ffffff;
+  background: #fff;
   max-width: 700px;
   margin: 30px auto;
-  padding: 30px 40px;
+  padding: 25px 35px;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
 }
 
-section.Experience h1 {
-  background: linear-gradient(135deg, #FF8C42, #2ECC71);
+section.Experience h2 {
+  background: linear-gradient(90deg, #2980b9, #27ae60);
   color: white;
   font-size: 30px;
   font-weight: 700;
@@ -245,29 +246,33 @@ section.Experience h1 {
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-
-section.Experience ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-section.Experience ul li {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 18px;
-  line-height: 1.5;
-  position: relative;
+.experience-item {
+  margin-bottom: 25px;
   padding-left: 24px;
+  position: relative;
 }
 
-section.Experience ul li::before {
+.experience-item::before {
   content: "✓";
   position: absolute;
   left: 0;
   top: 0;
-  color: #32CD99;
+  color: #27ae60;
   font-weight: bold;
 }
+
+.experience-item h3 {
+  margin: 10px 0 6px;
+  font-size: 22px;
+  color: #34495e;
+}
+
+.experience-item p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
 
 section.socials {
   background: #fff;
