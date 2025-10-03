@@ -221,6 +221,18 @@ section.projects h2 {
 .project a:hover {
   text-decoration: underline;
 }
+
+section.Experience {
+  background: #fff;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 25px 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #808A00;
+}
+
 section.socials {
   background: #fff;
   max-width: 700px;
