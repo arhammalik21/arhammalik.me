@@ -223,14 +223,50 @@ section.projects h2 {
 }
 
 section.Experience {
-  background: #fff;
+  background: #ffffff;
   max-width: 700px;
   margin: 30px auto;
-  padding: 25px 35px;
+  padding: 30px 40px;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #808A00;
+}
+
+section.Experience h1 {
+  background: linear-gradient(135deg, #FF8C42, #2ECC71);
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+
+section.Experience ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+section.Experience ul li {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 18px;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 24px;
+}
+
+section.Experience ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #32CD99;
+  font-weight: bold;
 }
 
 section.socials {
