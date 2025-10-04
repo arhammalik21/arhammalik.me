@@ -108,8 +108,9 @@ section.skills ul li::before {
 
 /* Education Section */
 section.Education h2 {
-  color: var(--accent);
-  border-left: 5px solid var(--accent);
+  color: #ff4b2b; /* bright red */
+  border-left: 5px solid #800000; /* maroon border */
+  text-shadow: 0 0 8px rgba(255, 75, 43, 0.6);
 }
 
 .Education h3 {
@@ -164,9 +165,11 @@ section.projects h2 {
 
 /* Experience Section */
 section.Experience h2 {
-  color: var(--secondary);
-  border-left: 5px solid var(--secondary);
+  color: #00a8ff;
+  border-left: 5px solid #00a8ff;
+  text-shadow: 0 0 8px rgba(0,168,255,0.6);
 }
+
 
 .experience-item {
   margin-bottom: 25px;
@@ -321,9 +324,22 @@ section.socials h2 {
   }
 
   .social-icons img {
-    width: 26px;
-    height: 26px;
-  }
+  width: 34px;
+  height: 34px;
+  margin: 0 10px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  background: rgba(255,255,255,0.1);
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0,212,255,0.3);
+}
+.social-icons img:hover {
+  transform: scale(1.15);
+  filter: brightness(1) saturate(3);
+  background: rgba(0,212,255,0.1);
+  box-shadow: 0 0 15px rgba(0,212,255,0.5);
+}
 }
 
 section:hover h2 {
