@@ -149,6 +149,27 @@
     once: true       
   });
 </script>
+
+  <script>
+const toggle = document.getElementById("theme-toggle");
+toggle.onclick = () => document.body.classList.toggle("light-mode");
+
+const roles = ["DevOps Engineer", "Cloud Enthusiast", "Automation Builder"];
+let i = 0, j = 0, current = "", isDeleting = false;
+
+function type() {
+  if (i < roles.length) {
+    if (!isDeleting && j <= roles[i].length) current = roles[i].substring(0, j++);
+    else if (isDeleting && j >= 0) current = roles[i].substring(0, j--);
+    document.getElementById("typed-text").textContent = current;
+    if (j === roles[i].length) isDeleting = true, setTimeout(type, 1000);
+    else if (isDeleting && j === 0) isDeleting = false, i = (i + 1) % roles.length;
+    setTimeout(type, isDeleting ? 60 : 100);
+  }
+}
+type();
+</script>
+
   
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
