@@ -1,101 +1,88 @@
+/* 🌌 Modern Tech Portfolio Theme - Enhanced by ChatGPT (Arham Edition) */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --bg-dark: #0a0f1a;
+  --bg-card: #101826;
+  --text-light: #e0e0e0;
+  --primary: #00d4ff;
+  --secondary: #27ae60;
+  --accent: #2980b9;
+  --danger: #e74c3c;
+  --shadow: rgba(0, 212, 255, 0.1);
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f0f0f0;
-  color: #333;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  transition: background 0.3s, color 0.3s;
 }
+
+/* Header */
 header {
-  background: #333;
-  color: white;
-  padding: 20px;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: var(--primary);
+  padding: 40px 20px;
   text-align: center;
-}
-section {
-  background: #fff;
-  margin: 20px auto;
-  padding: 20px 30px;
-  max-width: 700px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-section.about-me {
-  background: #fff;
-  max-width: 700px;
-  margin: 30px auto;
-  padding: 25px 35px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2c3e50;
-  line-height: 1.6;
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.2);
 }
 
-section.about-me h2 {
-  background: linear-gradient(90deg, #3498db, #2980b9);
-  color: white;
-  font-size: 30px;
+h1 {
+  font-size: 42px;
   font-weight: 700;
-  margin-bottom: 20px;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  color: var(--primary);
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+  margin-top: 10px;
 }
 
-
-
-section h2 {
-  color: #2c3e50;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 28px;
-  margin-bottom: 15px;
-  border-bottom: 3px solid #2980b9;
-  padding-bottom: 5px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+#typed-text {
+  color: var(--secondary);
+  font-weight: 600;
 }
 
-section ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-section ul li {
-  font-size: 18px;
-  padding: 8px 0;
-  border-bottom: 1px solid #ecf0f1;
-  color: #34495e;
-}
-
-section ul li:last-child {
-  border-bottom: none;
-}
-
-section.skills {
-  background: #ffffff;
-  max-width: 700px;
+/* Sections */
+section {
+  background: var(--bg-card);
   margin: 30px auto;
   padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 850px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-section.skills h2 {
-  background: linear-gradient(90deg, #2ecc71, #27ae60);
-  color: white;
-  font-size: 30px;
+section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.3);
+}
+
+/* Section Titles */
+section h2 {
+  color: var(--primary);
+  font-size: 28px;
   font-weight: 700;
-  margin-bottom: 20px;
-  padding: 12px 20px;
-  border-radius: 8px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border-left: 5px solid var(--primary);
+  padding-left: 12px;
+  margin-bottom: 20px;
 }
 
+/* About Me */
+section.about-me {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* Skills Section */
+section.skills h2 {
+  color: var(--secondary);
+  border-left: 5px solid var(--secondary);
+}
 
 section.skills ul {
   list-style: none;
@@ -104,238 +91,111 @@ section.skills ul {
 
 section.skills ul li {
   font-size: 18px;
-  color: #333;
-  margin-bottom: 18px;
-  line-height: 1.5;
+  color: var(--text-light);
+  margin-bottom: 16px;
   position: relative;
-  padding-left: 24px;
+  padding-left: 28px;
 }
 
 section.skills ul li::before {
-  content: "✓";
+  content: "⚙️";
   position: absolute;
   left: 0;
   top: 0;
-  color: #0a74da;
-  font-weight: bold;
+  color: var(--primary);
+  font-size: 18px;
 }
 
-section.Education {
-  background: #fff;
-  max-width: 700px;
-  margin: 30px auto;
-  padding: 25px 35px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2c3e50;
-}
-
+/* Education Section */
 section.Education h2 {
-  background: linear-gradient(90deg, #2c3e50, #006d77);
-  color: white;
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-
-.Education {
-  margin-bottom: 25px;
+  color: var(--accent);
+  border-left: 5px solid var(--accent);
 }
 
 .Education h3 {
-  margin: 10px 0 6px;
   font-size: 22px;
-  color: #34495e;
+  color: var(--primary);
 }
 
 .Education p {
+  color: #ccc;
   font-size: 16px;
-  color: #555;
-  margin-bottom: 6px;
 }
 
-.Education a {
-  color: #27ae60;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.Education a:hover {
-  text-decoration: underline;
-}
-
-section.projects {
-  background: #fff;
-  max-width: 700px;
-  margin: 30px auto;
-  padding: 25px 35px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2c3e50;
-}
-
+/* Projects Section */
 section.projects h2 {
-  background: linear-gradient(90deg, #f39c12, #e67e22);
-  color: white;
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  color: #f39c12;
+  border-left: 5px solid #f39c12;
 }
-
 
 .project {
   margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid var(--primary);
+  padding: 15px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
 }
 
 .project h3 {
-  margin: 10px 0 6px;
   font-size: 22px;
-  color: #34495e;
+  color: var(--primary);
 }
 
 .project p {
+  color: #bbb;
   font-size: 16px;
-  color: #555;
-  margin-bottom: 6px;
 }
 
 .project a {
-  color: #27ae60;
+  color: var(--secondary);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .project a:hover {
   text-decoration: underline;
 }
 
-section.Experience {
-  background: #fff;
-  max-width: 700px;
-  margin: 30px auto;
-  padding: 25px 35px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2c3e50;
-}
-
+/* Experience Section */
 section.Experience h2 {
-  background: linear-gradient(90deg, #2980b9, #27ae60);
-  color: white;
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  color: var(--secondary);
+  border-left: 5px solid var(--secondary);
 }
 
 .experience-item {
   margin-bottom: 25px;
-  padding-left: 24px;
+  padding-left: 28px;
   position: relative;
 }
 
 .experience-item::before {
-  content: "✓";
+  content: "💼";
   position: absolute;
   left: 0;
   top: 0;
-  color: #27ae60;
-  font-weight: bold;
+  color: var(--primary);
 }
 
 .experience-item h3 {
-  margin: 10px 0 6px;
   font-size: 22px;
-  color: #34495e;
+  color: var(--primary);
 }
 
 .experience-item p {
   font-size: 16px;
-  color: #555;
-  margin-bottom: 6px;
+  color: #ccc;
 }
 
-
-section.socials {
-  background: #fff;
-  max-width: 700px;
-  margin: 30px auto;
-  padding: 25px 35px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-section.socials h2 {
-  background: linear-gradient(90deg, #9b59b6, #8e44ad);
-  color: white;
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding: 10px 18px;
-  border-radius: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-
-.social-icons a {
-  margin: 0 10px;
-  display: inline-block;
-}
-
-.social-icons img {
-  width: 28px;
-  height: 28px;
-  margin: 0 12px;
-  vertical-align: middle;
-  transition: transform 0.2s ease-in-out;
-}
-
-.social-icons img:hover {
-  transform: scale(1.1);
-}
-section.achievements {
-  background: #fff;
-  max-width: 700px;
-  margin: 30px auto;
-  padding: 25px 35px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2c3e50;
-}
-
+/* Achievements Section */
 section.achievements h2 {
-  background: linear-gradient(90deg, #c0392b, #e74c3c);
-  color: white;
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  color: var(--danger);
+  border-left: 5px solid var(--danger);
 }
 
 section.achievements ul {
@@ -345,24 +205,104 @@ section.achievements ul {
 }
 
 section.achievements ul li {
-  position: relative;
+  background: rgba(255, 255, 255, 0.03);
   font-size: 17px;
-  color: #34495e;
+  color: #eee;
   padding: 12px 18px;
   margin-bottom: 12px;
-  border-left: 4px solid #c0392b;
-  background: #f9f9f9;
+  border-left: 4px solid var(--danger);
   border-radius: 6px;
   transition: background 0.3s ease;
 }
 
 section.achievements ul li:hover {
-  background: #f0f0f0;
+  background: rgba(255, 255, 255, 0.08);
 }
 
+/* Socials */
+section.socials {
+  text-align: center;
+  background: var(--bg-card);
+}
+
+section.socials h2 {
+  color: #9b59b6;
+  border-left: 5px solid #9b59b6;
+  display: inline-block;
+  text-align: left;
+}
+
+.social-icons a {
+  margin: 0 12px;
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  filter: brightness(0) invert(0.6) sepia(1) saturate(5) hue-rotate(180deg);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #aaa;
+  background: #0c1322;
+  border-top: 1px solid #1c2433;
+  margin-top: 40px;
+}
+
+.footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Dark Mode Toggle */
+#theme-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: var(--primary);
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+#theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   body {
     padding: 10px;
+  }
+
+  header {
+    padding: 30px 10px;
+  }
+
+  h1 {
+    font-size: 30px;
   }
 
   section {
@@ -370,25 +310,8 @@ section.achievements ul li:hover {
     margin: 20px auto;
   }
 
-  h1 {
-    font-size: 26px;
-    text-align: center;
-  }
-
-  h2 {
+  section h2 {
     font-size: 22px;
-    text-align: center;
-  }
-
-  .resume-button a {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-
-  .social-icons img {
-    width: 24px;
-    height: 24px;
-    margin: 0 8px;
   }
 
   .project h3,
@@ -396,40 +319,13 @@ section.achievements ul li:hover {
   section ul li {
     font-size: 15px;
   }
-}
-h1 {
-  font-size: 36px;
-  text-align: center;
-  margin-top: 20px;
-  font-weight: 700;
-  color: #2c3e50;
+
+  .social-icons img {
+    width: 26px;
+    height: 26px;
+  }
 }
 
-#typed-text {
-  color: #27ae60; 
-}
-.footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  color: #777;
-  background: #f4f4f4;
-  margin-top: 40px;
-  border-top: 1px solid #ddd;
-}
-
-.footer a {
-  color: #2980b9;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-body.dark-mode .footer {
-  background: #1a1a1a;
-  color: #bbb;
-  border-top: 1px solid #444;
-}
-
-body.dark-mode .footer a {
-  color: #3498db;
+section:hover h2 {
+  text-shadow: 0 0 10px var(--primary);
 }
