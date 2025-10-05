@@ -1,5 +1,3 @@
-/* 🌌 Modern Tech Portfolio Theme - Enhanced by ChatGPT (Arham Edition) */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
@@ -22,7 +20,6 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-/* Header */
 header {
   background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
   color: var(--primary);
@@ -44,7 +41,6 @@ h1 {
   font-weight: 600;
 }
 
-/* Sections */
 section {
   background: var(--bg-card);
   margin: 30px auto;
@@ -60,7 +56,6 @@ section:hover {
   box-shadow: 0 0 25px rgba(0, 212, 255, 0.3);
 }
 
-/* Section Titles */
 section h2 {
   color: var(--primary);
   font-size: 28px;
@@ -72,13 +67,11 @@ section h2 {
   margin-bottom: 20px;
 }
 
-/* About Me */
 section.about-me {
   color: var(--text-light);
   line-height: 1.7;
 }
 
-/* Skills Section */
 section.skills h2 {
   color: var(--secondary);
   border-left: 5px solid var(--secondary);
@@ -106,10 +99,9 @@ section.skills ul li::before {
   font-size: 18px;
 }
 
-/* Education Section */
 section.Education h2 {
-  color: #ff4b2b; /* bright red */
-  border-left: 5px solid #800000; /* maroon border */
+  color: #ff4b2b; 
+  border-left: 5px solid #800000; 
   text-shadow: 0 0 8px rgba(255, 75, 43, 0.6);
 }
 
@@ -123,7 +115,6 @@ section.Education h2 {
   font-size: 16px;
 }
 
-/* Projects Section */
 section.projects h2 {
   color: #f39c12;
   border-left: 5px solid #f39c12;
@@ -163,7 +154,6 @@ section.projects h2 {
   text-decoration: underline;
 }
 
-/* Experience Section */
 section.Experience h2 {
   color: #00a8ff;
   border-left: 5px solid #00a8ff;
@@ -195,7 +185,6 @@ section.Experience h2 {
   color: #ccc;
 }
 
-/* Achievements Section */
 section.achievements h2 {
   color: var(--danger);
   border-left: 5px solid var(--danger);
@@ -222,7 +211,6 @@ section.achievements ul li:hover {
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* Socials */
 section.socials {
   text-align: center;
   background: var(--bg-card);
@@ -253,7 +241,6 @@ section.socials h2 {
   filter: brightness(0) invert(0.6) sepia(1) saturate(5) hue-rotate(180deg);
 }
 
-/* Footer */
 .footer {
   text-align: center;
   padding: 20px;
@@ -274,7 +261,6 @@ section.socials h2 {
   text-decoration: underline;
 }
 
-/* Dark Mode Toggle */
 #theme-toggle {
   position: fixed;
   top: 15px;
@@ -294,7 +280,6 @@ section.socials h2 {
   transform: rotate(20deg);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   body {
     padding: 10px;
