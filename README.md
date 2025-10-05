@@ -1,9 +1,9 @@
-# arhammalik21.github.io
+# arhammalik.me
 🧑‍💻 My Portfolio
 
 Welcome to my portfolio! This site showcases my projects, skills, and achievements.
 
-🌐 Live Website → https://arhammalik21.github.io/
+🌐 Live Website → https://arhammalik.me
 
 🚀 Features
 
