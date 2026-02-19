@@ -1,144 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arham Malik - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arham Malik - Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
-  
+
 <body>
-  <header>
-    <img src="Photox.png" alt="Arham Malik" style="width:250px; height:250px; border-radius: 60%;">
-    <h1>I'm <span id="typed-text"></span></h1>
-    <p>Cloud & DevOps Enthusiast | BTech Electrical Engineering</p>
-  </header>
-  
-  <section class="about-me" data-aos="fade-up">
+
+<header>
+  <img src="Photox.png" alt="Arham Malik"
+       style="width:250px; height:250px; border-radius:60%;">
+  <h1>I'm <span id="typed-text"></span></h1>
+  <p>Founder of DaySavvy | Cloud & DevOps Enthusiast | BTech Electrical Engineering</p>
+</header>
+
+<!-- ABOUT -->
+<section class="about-me" data-aos="fade-up">
   <h2>About Me</h2>
-  <p>Hello! I’m Arham Malik, an aspiring Full-Stack Developer with a passion for cloud computing,
-    DevOps, and software engineering. I enjoy building and deploying full-stack projects using cloud
-    platforms like Google Cloud Platform (GCP) and AWS, and I’m continuously learning new
-    technologies to sharpen my skills. Beyond tech, I’m an avid basketball player and a team leader,
-    which helps me thrive in collaborative environments.</p>
- </section>
+  <p>
+    Hello! I’m Arham Malik — Founder of <strong>DaySavvy</strong>, an AI-powered productivity platform
+    focused on intelligent task management and voice-assisted productivity.
+    I am an aspiring Full-Stack Developer passionate about cloud computing,
+    DevOps engineering, and building real-world scalable products.
+    I enjoy deploying applications using AWS and Google Cloud,
+    automating workflows, and leading tech initiatives. Beyond tech,
+    I’m a competitive basketball player and team leader, thriving in collaborative environments.
+  </p>
+</section>
 
-  <section class="Education" data-aos="fade-left">
+<!-- EDUCATION -->
+<section class="education" data-aos="fade-left">
   <h2>Education</h2>
-    <div class="Education">
-    <h3> Bachelor of Technology (BTech) in Electrical Engineering</h3>
-    <p>Aligarh Muslim University (AMU), Aligarh, India
-      <li>2023 – 2027</li>
-    </p> 
-    </div>
 
-    <div class="Education">
-    <h3> Senior Secondary School (12th)</h3>
-    <p>SHSSS(+2 Boys), AMU , Aligarh India
-      <li>2023</li>
-    </p> 
-    </div>
+  <div class="education">
+    <h3>Bachelor of Technology (BTech) in Electrical Engineering</h3>
+    <p>Aligarh Muslim University (AMU), Aligarh, India</p>
+    <li>2023 – 2027</li>
+  </div>
 
-    <div class="Education">
-    <h3> High School (10th)</h3>
-    <p>STS School (Minto Circle), AMU , Aligarh ,India
-      <li>2021</li>
-    </p> 
-    </div>
-    </section>
-    
-  <section class="projects" data-aos="fade-left">
+  <div class="education">
+    <h3>Senior Secondary School (12th)</h3>
+    <p>SHSSS(+2 Boys), AMU, Aligarh, India</p>
+    <li>2023</li>
+  </div>
+
+  <div class="education">
+    <h3>High School (10th)</h3>
+    <p>STS School (Minto Circle), AMU, Aligarh, India</p>
+    <li>2021</li>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" data-aos="fade-left">
   <h2>Projects</h2>
+
   <div class="project">
-    <h3>DAYSAVVY</h3>
-    <p>Developed a full-featured task management web application using Flask, Python, SQLAlchemy, HTML, CSS, and JavaScript, featuring AI voice integration for adding and managing tasks. 
-      Implemented task creation, categorization, editing, deletion, and date-time tracking with a responsive UI and secure backend database management.
-      Leveraged AI voice commands to enhance user interaction and productivity, delivering a seamless and intelligent task management experience.</p>
+    <h3>DaySavvy — AI Productivity Platform (Founder)</h3>
+    <p>
+      Founded and built DaySavvy — an AI-powered task management web application
+      designed to go beyond reminders by providing intelligent assistance and voice interaction.
+      Built using Flask, Python, SQLAlchemy, HTML, CSS, and JavaScript.
+      Implemented AI voice commands, task categorization, smart scheduling,
+      secure backend database management, and responsive UI.
+      DaySavvy focuses on responsibility-driven productivity and human-centered design.
+    </p>
   </div>
 
-     <div class="project">
-    <h3> DevOps Status Dashboard </h3>
-    <p> Tech Stack: Python (Flask), Docker, GitHub Actions, AWS EC2, CI/CD
- Built and deployed a cloud-hosted dashboard showcasing
- automated builds and deployment using GitHub Actions →
- Docker
- Hub →
- AWS EC2. Containerized the Flask app, configured CI/CD for
- zero-downtime updates, and automated version tagging and
- environment management — demonstrating full-cycle DevOps
- workflow automation.</p>
+  <div class="project">
+    <h3>DevOps Status Dashboard</h3>
+    <p>
+      Tech Stack: Python (Flask), Docker, GitHub Actions, AWS EC2, CI/CD.
+      Built and deployed a cloud-hosted dashboard demonstrating automated CI/CD workflows.
+      Containerized the app, configured GitHub Actions pipelines,
+      automated version tagging, and enabled zero-downtime deployments.
+    </p>
   </div>
-    
-    <div class="project">
-    <h3>Google Cloud Skill Boost Badges</h3>
-    <p>Earned multiple Google Cloud badges by completing hands-on quests including:
-      <ul>
-        <li>GCP Essentials</li>
-        <li>Security & Identity Fundamentals</li>
-        <li>VM Instances and IAM</li>
-        <li>Vault and Secrets Management</li>
-      </ul>
-      These badges reflect my practical knowledge in deploying, securing, and managing cloud infrastructure.
+
+  <div class="project">
+    <h3>Google Cloud Skill Boost Projects</h3>
+    <p>
+      Completed multiple hands-on cloud labs including GCP Essentials,
+      Security & Identity, VM Instances, IAM, Vault, and Secrets Management.
+      These projects strengthened practical cloud infrastructure and security knowledge.
     </p>
   </div>
 
   <div class="project">
     <h3>Hackathon Participation</h3>
-    <p>Participated in global hackathons like IngeniumSTEM Summer Hacks and HackAI Challenge by Dell & NVIDIA. Explored cloud and AI-based ideas, collaborated remotely, and submitted concept prototypes.</p>
+    <p>
+      Participated in global hackathons like IngeniumSTEM Summer Hacks
+      and HackAI Challenge (Dell & NVIDIA), collaborating remotely and building cloud + AI ideas.
+    </p>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience" data-aos="fade-left">
+  <h2>Experience & Leadership</h2>
+
+  <div class="experience">
+    <h3>Founder — DaySavvy</h3>
+    <p>Leading product vision, development, branding, and growth strategy for an AI-driven productivity startup.</p>
   </div>
 
-  <div class="project">
-    <h3>Upcoming Python Projects</h3>
-    <p>Planning to build small automation tools and cloud-related scripts using Python and Bash. These mini-projects will help solidify my backend and DevOps knowledge.</p>
+  <div class="experience">
+    <h3>General Secretary — Machine Learning Club (2025)</h3>
+    <p>ZHCET, AMU — Driving AI/ML initiatives and fostering a strong tech community.</p>
   </div>
-  </section>
 
-   <section class="Experience" data-aos="fade-left">
-  <h2>Experience</h2>
-  <div class="Experience">
-    <h3>General Secretary - 2025</h3>
-    <p>Machine Learning Club, ZHCET — driving AI/ML initiatives and fostering a vibrant tech community on campus.</p>
+  <div class="experience">
+    <h3>Secretary IT — Sulaiman Hall</h3>
+    <p>Managed technical initiatives, events, and digital operations.</p>
   </div>
-   </section>
-  
-  <section class="skills" data-aos="fade-right">
+
+  <div class="experience">
+    <h3>Captain — Basketball Team (2026)</h3>
+    <p>Sulaiman Hall, AMU — Leading the team in tournaments and inter-hostel competitions.</p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills" data-aos="fade-right">
   <h2>Skills</h2>
   <ul>
     <li>
-      <strong>Cloud Platforms:</strong>  
-      Hands-on experience with Google Cloud Platform (GCP) services including Compute Engine, IAM, Vault, and Cloud Storage. Familiar with AWS basics and deploying applications on EC2 instances.
+      <strong>Cloud Platforms:</strong>
+      Google Cloud Platform (Compute Engine, IAM, Vault, Cloud Storage),
+      AWS basics including EC2 deployment.
     </li>
     <li>
-      <strong>DevOps Tools:</strong>  
-      Practical knowledge of Vault for secrets management, basics of Kubernetes for container orchestration, and learning Terraform for infrastructure as code.
+      <strong>DevOps:</strong>
+      Docker, GitHub Actions, CI/CD pipelines, Vault,
+      Kubernetes basics, Terraform learning.
     </li>
     <li>
-      <strong>Programming Languages:</strong>  
-      Proficient in Python for scripting, automation, and data analysis. Basic understanding of Linux command-line and shell scripting.
+      <strong>Programming:</strong>
+      Python, Flask, Linux CLI, Shell scripting, HTML, CSS, JavaScript.
     </li>
     <li>
-      <strong>Version Control:</strong>  
-      Experienced with Git for source code management, branching, merging, and collaborating on projects via GitHub.
+      <strong>Version Control:</strong>
+      Git & GitHub workflow, branching, collaboration, deployment pipelines.
     </li>
   </ul>
 </section>
-  
-  <section class="achievements" data-aos="zoom-in">
+
+<!-- ACHIEVEMENTS -->
+<section class="achievements" data-aos="zoom-in">
   <h2>Achievements</h2>
   <ul>
-    <li>🖥️ Served as Secretary IT in Sulaiman Hall, managing IT initiatives and events.</li>
-    <li>📜HackerRank Certificates – Python (Basic), HTML & CSS (Intermediate)</li>
-    <li>🎓 Earned multiple badges on Google Cloud Skill Boost for completing hands-on quests.</li>
-    <li>💻 Participated in global hackathons like IngeniumSTEM Summer Hacks and HackAI Challenge.</li>
-    <li>🎖️ Awarded the AWS ETC Digital Badge for demonstrating cloud computing skills and active engagement in the AWS Educate program.</li>
-    <li>📈 Improved my skills in cloud computing, DevOps, and automation through continuous learning.</li>
-    <li>🏆 Won a basketball tournament trophy representing my hostel team.</li>
+    <li>🏆 DaySavvy won <strong>2nd Best Project Award</strong> at AI Exhibition (Pre-event of AI Impact Summit 2026).</li>
+    <li>🧠 Founder of DaySavvy — AI-powered productivity platform.</li>
+    <li>📜 HackerRank Certificates – Python (Basic), HTML & CSS (Intermediate).</li>
+    <li>🎓 Earned multiple Google Cloud Skill Boost badges.</li>
+    <li>💻 Participated in global hackathons (Dell & NVIDIA HackAI, IngeniumSTEM).</li>
+    <li>🎖️ AWS ETC Digital Badge for cloud computing engagement.</li>
+    <li>🏀 Captain, Basketball Team — Sulaiman Hall AMU (2026).</li>
+    <li>🏆 Won basketball tournament trophy representing hostel team.</li>
   </ul>
 </section>
-  
- <section class="socials" data-aos="fade-up">
+
+<!-- SOCIALS -->
+<section class="socials" data-aos="fade-up">
   <h2>Connect with Me</h2>
   <div class="social-icons">
     <a href="https://github.com/arhammalik21" target="_blank">
@@ -147,60 +175,45 @@
     <a href="https://www.linkedin.com/in/arham-malik-722335312/" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
     </a>
-    <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKCFTDJnNtRKbQmlxLmsBNLPgDcMbtVRzfLgbFPtfFHcMQNXpHJMWBmBSXTRNHqQHFGvkVV">
-      <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Gmail">
+    <a href="mailto:07abdulbari@gmail.com">
+      <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Email">
     </a>
   </div>
 </section>
-  
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2026 Arham Malik. All rights reserved.</p>
+</footer>
+
+<!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({
-    duration: 1000,  
-    once: true       
-  });
+AOS.init({
+  duration: 1000,
+  once: true
+});
 </script>
 
-  <script>
-const toggle = document.getElementById("theme-toggle");
-toggle.onclick = () => document.body.classList.toggle("light-mode");
-
-const roles = ["DevOps Engineer", "Cloud Enthusiast", "Automation Builder"];
-let i = 0, j = 0, current = "", isDeleting = false;
-
-function type() {
-  if (i < roles.length) {
-    if (!isDeleting && j <= roles[i].length) current = roles[i].substring(0, j++);
-    else if (isDeleting && j >= 0) current = roles[i].substring(0, j--);
-    document.getElementById("typed-text").textContent = current;
-    if (j === roles[i].length) isDeleting = true, setTimeout(type, 1000);
-    else if (isDeleting && j === 0) isDeleting = false, i = (i + 1) % roles.length;
-    setTimeout(type, isDeleting ? 60 : 100);
-  }
-}
-type();
+<!-- TYPED TEXT -->
+<script>
+var typed = new Typed("#typed-text", {
+  strings: [
+    "Arham Malik",
+    "Founder of DaySavvy",
+    "Cloud & DevOps Enthusiast",
+    "Automation Builder",
+    "Basketball Captain"
+  ],
+  typeSpeed: 60,
+  backSpeed: 30,
+  backDelay: 1000,
+  loop: true,
+  showCursor: true,
+  cursorChar: "|"
+});
 </script>
 
-  
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script>
-  AOS.init({
-    duration: 1000,
-    once: true
-  });
-
-  var typed = new Typed("#typed-text", {
-    strings: ["Arham Malik", "a Cloud Enthusiast", "an Electrical Engineer" , "a Problem Solver", "a Basketball Player"],
-    typeSpeed: 60,
-    backSpeed: 30,
-    backDelay: 1000,
-    loop: true,
-    showCursor: true,
-    cursorChar: "|"
-  });
-</script>
-  <footer class="footer">
-  <p>&copy; 2025 Arham Malik. All rights reserved. | <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKCFTDJnNtRKbQmlxLmsBNLPgDcMbtVRzfLgbFPtfFHcMQNXpHJMWBmBSXTRNHqQHFGvkVV">Contact</a></p>
-</footer>
 </body>
 </html>
+
