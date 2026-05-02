@@ -144,3 +144,67 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// Auto-playing Image Carousel
+const slides = document.querySelectorAll('.carousel-slide');
+let currentSlide = 0;
+
+function nextSlide() {
+  if(slides.length === 0) return;
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add('active');
+}
+
+if(slides.length > 0) {
+  setInterval(nextSlide, 4000); // Change image every 4 seconds
+}
+
+// Global Parallax & Dynamic Animations on Scroll
+window.addEventListener('scroll', () => {
+  // Parallax effect on Hero Visual
+  const heroVisual = document.querySelector('.hero-visual');
+  if (heroVisual) {
+    const scrollY = window.scrollY;
+    heroVisual.style.transform = `translateY(${scrollY * 0.15}px)`;
+  }
+  
+  // Parallax effect on tech grid
+  const techGrid = document.querySelector('.tech-grid-overlay');
+  if (techGrid) {
+    techGrid.style.transform = `perspective(500px) rotateX(60deg) scale(2) translateY(${window.scrollY * 0.05}px)`;
+  }
+});
+
+// Custom Cursor Animation
+const cursor = document.querySelector('.custom-cursor');
+const cursorDot = document.querySelector('.custom-cursor-dot');
+
+if (cursor && cursorDot) {
+  window.addEventListener('mousemove', (e) => {
+    // Fast tracking for the dot
+    cursorDot.style.left = `${e.clientX}px`;
+    cursorDot.style.top = `${e.clientY}px`;
+    
+    // Smooth trailing for the outline
+    cursor.animate({
+      left: `${e.clientX}px`,
+      top: `${e.clientY}px`
+    }, { duration: 500, fill: "forwards" });
+  });
+
+  // Cursor hover effects on links and buttons
+  const hoverables = document.querySelectorAll('a, .btn, .premium-card, .magnetic-btn');
+  hoverables.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.width = '60px';
+      cursor.style.height = '60px';
+      cursor.style.backgroundColor = 'rgba(0, 240, 255, 0.1)';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.style.width = '20px';
+      cursor.style.height = '20px';
+      cursor.style.backgroundColor = 'transparent';
+    });
+  });
+}
