@@ -133,6 +133,12 @@ h1, h2, h3, h4 {
   mix-blend-mode: difference;
 }
 
+.custom-cursor.hovering {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 240, 255, 0.1);
+}
+
 .custom-cursor-dot {
   position: fixed;
   top: 0;

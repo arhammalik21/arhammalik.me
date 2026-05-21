@@ -161,50 +161,63 @@ if(slides.length > 0) {
 }
 
 // Global Parallax & Dynamic Animations on Scroll
-window.addEventListener('scroll', () => {
-  // Parallax effect on Hero Visual
-  const heroVisual = document.querySelector('.hero-visual');
-  if (heroVisual) {
-    const scrollY = window.scrollY;
-    heroVisual.style.transform = `translateY(${scrollY * 0.15}px)`;
-  }
-  
-  // Parallax effect on tech grid
-  const techGrid = document.querySelector('.tech-grid-overlay');
-  if (techGrid) {
-    techGrid.style.transform = `perspective(500px) rotateX(60deg) scale(2) translateY(${window.scrollY * 0.05}px)`;
-  }
-});
+const heroVisual = document.querySelector('.hero-visual');
+const techGrid = document.querySelector('.tech-grid-overlay');
 
-// Custom Cursor Animation
+let scrollTicking = false;
+window.addEventListener('scroll', () => {
+  if (!scrollTicking) {
+    window.requestAnimationFrame(() => {
+      const scrollY = window.scrollY;
+      if (heroVisual) {
+        heroVisual.style.transform = `translate3d(0, ${scrollY * 0.15}px, 0)`;
+      }
+      if (techGrid) {
+        techGrid.style.transform = `perspective(500px) rotateX(60deg) scale(2) translate3d(0, ${scrollY * 0.05}px, 0)`;
+      }
+      scrollTicking = false;
+    });
+    scrollTicking = true;
+  }
+}, { passive: true });
+
+// Custom Cursor Animation with GPU-accelerated LERP loop
 const cursor = document.querySelector('.custom-cursor');
 const cursorDot = document.querySelector('.custom-cursor-dot');
 
 if (cursor && cursorDot) {
-  window.addEventListener('mousemove', (e) => {
-    // Fast tracking for the dot
-    cursorDot.style.left = `${e.clientX}px`;
-    cursorDot.style.top = `${e.clientY}px`;
-    
-    // Smooth trailing for the outline
-    cursor.animate({
-      left: `${e.clientX}px`,
-      top: `${e.clientY}px`
-    }, { duration: 500, fill: "forwards" });
-  });
+  let mouseX = 0, mouseY = 0;
+  let cursorX = 0, cursorY = 0;
 
-  // Cursor hover effects on links and buttons
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    // Position dot immediately
+    cursorDot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+  }, { passive: true });
+
+  // Lerping function for smooth follow
+  function updateCursor() {
+    cursorX += (mouseX - cursorX) * 0.15;
+    cursorY += (mouseY - cursorY) * 0.15;
+    
+    cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+    
+    requestAnimationFrame(updateCursor);
+  }
+  
+  // Start loop
+  requestAnimationFrame(updateCursor);
+
+  // Cursor hover effects on links and buttons using class toggle
   const hoverables = document.querySelectorAll('a, .btn, .premium-card, .magnetic-btn');
   hoverables.forEach(el => {
     el.addEventListener('mouseenter', () => {
-      cursor.style.width = '60px';
-      cursor.style.height = '60px';
-      cursor.style.backgroundColor = 'rgba(0, 240, 255, 0.1)';
+      cursor.classList.add('hovering');
     });
     el.addEventListener('mouseleave', () => {
-      cursor.style.width = '20px';
-      cursor.style.height = '20px';
-      cursor.style.backgroundColor = 'transparent';
+      cursor.classList.remove('hovering');
     });
   });
 }
