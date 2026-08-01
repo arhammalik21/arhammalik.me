@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arham Malik | DaySavvy Founder</title>
+  <title>Arham Malik | Full-Stack Developer & DevOps Engineer</title>
+  <meta name="description" content="Arham Malik — Founder of DaySavvy, Full-Stack Developer, DevOps Engineer. Building AI-powered products with React, Flask, Docker, AWS, and GCP.">
+  <meta name="keywords" content="Arham Malik, Full-Stack Developer, DevOps, DaySavvy, AI, Portfolio">
+  <meta name="author" content="Arham Malik">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -11,63 +14,102 @@
 </head>
 <body>
 
-  <!-- Custom Animated Cursor -->
+  <!-- ═══ PRELOADER ═══ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-terminal" id="preloader-terminal">
+      <div class="line"><span class="comment">// initializing arham_malik.portfolio</span></div>
+      <div class="line">> <span class="highlight">loading</span> core_modules...</div>
+      <div class="line">> <span class="highlight">compiling</span> experience_data...</div>
+      <div class="line">> <span class="highlight">rendering</span> particle_network...</div>
+      <div class="line">> <span class="highlight">mounting</span> ui_components...</div>
+      <div class="line">> <span class="success">✓ all systems operational</span></div>
+      <div class="line">> <span class="warn">READY</span> — launching interface...</div>
+    </div>
+    <div class="preloader-bar">
+      <div class="preloader-bar-fill" id="preloader-bar-fill"></div>
+    </div>
+  </div>
+
+  <!-- ═══ CUSTOM CURSOR ═══ -->
   <div class="custom-cursor"></div>
   <div class="custom-cursor-dot"></div>
 
-  <!-- Ambient Aurora & Tech Grid Background -->
-  <div class="aurora-bg">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-  </div>
-  <div class="tech-grid-overlay"></div>
+  <!-- ═══ PARTICLE CANVAS BACKGROUND ═══ -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="bg-grid-overlay"></div>
 
-  <nav class="premium-nav">
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="premium-nav" id="main-nav">
     <div class="nav-content">
       <a href="#" class="logo">
-        <img src="logo.webp" alt="DaySavvy">
+        <img src="logo.webp" alt="Arham Malik Logo">
         <span>Arham Malik</span>
       </a>
-      <div class="nav-links">
-        <a href="#about" class="magnetic"><span class="nav-num">01.</span> About</a>
-        <a href="#daysavvy" class="magnetic"><span class="nav-num">02.</span> DaySavvy</a>
-        <a href="#projects" class="magnetic"><span class="nav-num">03.</span> Projects</a>
-        <a href="#skills" class="magnetic"><span class="nav-num">04.</span> Skills</a>
-        <a href="#achievements" class="magnetic"><span class="nav-num">05.</span> Achievements</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about"><span class="nav-num">01.</span> About</a>
+        <a href="#experience"><span class="nav-num">02.</span> Experience</a>
+        <a href="#daysavvy"><span class="nav-num">03.</span> DaySavvy</a>
+        <a href="#projects"><span class="nav-num">04.</span> Projects</a>
+        <a href="#skills"><span class="nav-num">05.</span> Skills</a>
+        <a href="#achievements"><span class="nav-num">06.</span> Achievements</a>
       </div>
     </div>
   </nav>
 
   <main>
-    <!-- HERO / ABOUT SECTION -->
+    <!-- ═══════════════════════════════════
+         HERO / ABOUT SECTION
+         ═══════════════════════════════════ -->
     <header class="hero" id="about">
       <div class="container hero-container">
         <div class="hero-text animate-on-load">
-          <div class="tech-badge">
-            <span class="pulse-dot"></span> <span class="mono-label">FOUNDER_MODE_ACTIVE</span>
+          <div class="status-badge">
+            <span class="pulse-dot"></span>
+            <span class="mono-label">AVAILABLE FOR OPPORTUNITIES</span>
           </div>
-          <h1 class="hero-title">
+
+          <h1 class="glitch-text" data-text="Arham Malik">
             <span class="gradient-text">Arham Malik</span>
           </h1>
-          
+
           <div class="typewriter-wrap">
-            <span class="prompt">>_ </span> <span id="typewriter"></span><span class="cursor"></span>
+            <span class="prompt">>_ </span><span id="typewriter"></span><span class="cursor"></span>
           </div>
 
           <p class="hero-subtitle">
-            Founder of <strong>DaySavvy</strong>, an emotionally intelligent AI assistant focused on decision-making and productivity. Experience in full-stack development, cloud computing (GCP, AWS), and DevOps. Interested in AI safety, alignment, and the behavioral impact of intelligent systems. Pursuing B.Tech in Electrical Engineering.
+            Builder passionate about creating <strong>user-centric software products</strong>. Experienced in full-stack development, DevOps workflows, and leading the development of <strong>AI-powered applications</strong> from idea to deployment.
           </p>
-          
-          <div class="hero-contact tech-panel">
+
+          <!-- Stats Counters -->
+          <div class="stats-row">
+            <div class="stat-item">
+              <div class="stat-number"><span class="counter" data-target="1000">0</span><span class="suffix">+</span></div>
+              <div class="stat-label">Users Served</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number"><span class="counter" data-target="2000">0</span><span class="suffix">+</span></div>
+              <div class="stat-label">AI Interactions</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number"><span class="counter" data-target="8">0</span><span class="suffix">+</span></div>
+              <div class="stat-label">Feedback Sessions</div>
+            </div>
+          </div>
+
+          <div class="contact-panel">
             <div class="contact-item"><span class="mono-label">LOC:</span> Uttarakhand, India</div>
             <div class="contact-item"><span class="mono-label">MAIL:</span> arhammaliksg@gmail.com</div>
-            <div class="contact-item"><span class="mono-label">WEB:</span> <a href="https://arhammalik.me" target="_blank">https://arhammalik.me</a></div>
-            <div class="contact-item"><span class="mono-label">LINKEDIN:</span> <a href="https://linkedin.com/in/arham-malik-722335312/" target="_blank">linkedin.com/in/arham-malik-722335312/</a></div>
+            <div class="contact-item"><span class="mono-label">WEB:</span> <a href="https://arhammalik.me" target="_blank">arhammalik.me</a></div>
+            <div class="contact-item"><span class="mono-label">LINKEDIN:</span> <a href="https://linkedin.com/in/arham-malik-722335312/" target="_blank">linkedin.com/in/arham-malik</a></div>
             <div class="contact-item"><span class="mono-label">GITHUB:</span> <a href="https://github.com/arhammalik21" target="_blank">github.com/arhammalik21</a></div>
           </div>
         </div>
-        
+
         <div class="hero-visual animate-on-load delay-1">
           <div class="image-wrapper tilt-card">
             <div class="tech-brackets left-bracket"></div>
@@ -77,23 +119,117 @@
               <div class="scanline"></div>
             </div>
             <div class="floating-badge fb-1"><span class="mono-label">STARTUP:</span> DaySavvy</div>
-            <div class="floating-badge fb-2"><span class="mono-label">ROLE:</span> Full-Stack Developer</div>
+            <div class="floating-badge fb-2"><span class="mono-label">PPO:</span> TechTrail DMC</div>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- MASSIVE DAYSAVVY OVERVIEW -->
+    <div class="section-divider"></div>
+
+    <!-- ═══════════════════════════════════
+         EXPERIENCE SECTION (NEW)
+         ═══════════════════════════════════ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading reveal-up">
+          <span class="mono-heading">// WORK.EXPERIENCE</span>
+          <h2>Professional Experience</h2>
+        </div>
+
+        <div class="experience-timeline">
+          <!-- TechTrail DMC PPO -->
+          <div class="timeline-item reveal-up">
+            <div class="timeline-node"></div>
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Full Stack Developer & DevOps Engineer <span style="color: var(--accent-green);">(PPO)</span></h3>
+                <div class="timeline-company">TechTrail DMC Pvt. Ltd. — AMUIF</div>
+                <div class="ppo-badge">
+                  <span class="pulse-dot" style="width:6px;height:6px;"></span>
+                  PPO — Intern converted to Full-Time
+                </div>
+              </div>
+              <span class="timeline-date">Apr 2026 — Present</span>
+            </div>
+            <ul class="tech-list mt-15 animated-list">
+              <li>Earned a <strong>Pre-Placement Offer (PPO)</strong> based on performance during the internship, transitioning into a full-time role.</li>
+              <li>Contributed to the development, testing, and deployment of <strong>production web applications</strong> across frontend and backend systems.</li>
+              <li>Collaborated with cross-functional teams to deliver features, troubleshoot issues, and support timely project releases.</li>
+              <li>Assisted in implementing deployment workflows using <strong>cloud infrastructure and DevOps practices</strong>.</li>
+            </ul>
+            <div class="project-tech-tags mt-15">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">CI/CD</span>
+              <span class="tech-tag">GitHub Actions</span>
+            </div>
+          </div>
+
+          <!-- Leadership Roles -->
+          <div class="timeline-item reveal-up delay-1">
+            <div class="timeline-node"></div>
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">General Secretary</h3>
+                <div class="timeline-company">Machine Learning Club, ZHCET</div>
+              </div>
+              <span class="timeline-date">2026</span>
+            </div>
+            <ul class="tech-list mt-15 animated-list">
+              <li>Led technical initiatives and organized AI/ML-focused activities to increase student engagement in emerging technologies.</li>
+              <li>Coordinated events and collaborated with student teams to promote innovation and peer learning.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item reveal-up delay-2">
+            <div class="timeline-node"></div>
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Secretary IT</h3>
+                <div class="timeline-company">Sulaiman Hall, AMU</div>
+              </div>
+              <span class="timeline-date">2025</span>
+            </div>
+            <ul class="tech-list mt-15 animated-list">
+              <li>Managed IT operations and supported the execution of technical events and initiatives.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item reveal-up delay-3">
+            <div class="timeline-node"></div>
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Captain, Basketball</h3>
+                <div class="timeline-company">Sulaiman Hall, AMU</div>
+              </div>
+              <span class="timeline-date">2026</span>
+            </div>
+            <ul class="tech-list mt-15 animated-list">
+              <li>Demonstrated leadership, teamwork, and strategic decision-making while leading the team in competitive tournaments.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══════════════════════════════════
+         DAYSAVVY OVERVIEW
+         ═══════════════════════════════════ -->
     <section class="section" id="daysavvy">
       <div class="container">
         <div class="section-heading text-center reveal-up">
           <span class="mono-heading">// CORE.STARTUP</span>
-          <h2>DaySavvy Overview</h2>
+          <h2>DaySavvy — AI Productivity Platform</h2>
         </div>
-        
+
         <div class="daysavvy-grid">
-          
-          <div class="premium-card span-2 reveal-up tech-glow mb-30">
+          <!-- Main DaySavvy Card -->
+          <div class="premium-card reveal-up mb-30">
             <div class="card-header space-between">
               <div style="display: flex; align-items: center; gap: 15px;">
                 <img src="logo.webp" alt="DaySavvy Logo" class="sm-logo" loading="lazy">
@@ -102,12 +238,28 @@
                   <p class="role-highlight">Founder & Developer</p>
                 </div>
               </div>
-              <div class="tech-badge"><span class="mono-label">Live Product:</span> <a href="https://daysavvy.com" target="_blank">daysavvy.com</a></div>
+              <div class="tech-badge"><span class="mono-label">Live:</span> <a href="https://daysavvy.com" target="_blank">daysavvy.com</a></div>
             </div>
-            
+
             <p class="large-text mt-15 mb-20">
-              An emotionally intelligent AI assistant that converts text, voice, and images into structured tasks and plans. Designed as a conversational system to reduce cognitive overload and improve decision-making.
+              Founded and developed an <strong>AI-powered productivity platform</strong> that converts text, voice, and image inputs into actionable tasks and structured plans. Designed as a conversational system to reduce cognitive overload and improve decision-making.
             </p>
+
+            <!-- DaySavvy Metrics -->
+            <div class="metrics-row">
+              <div class="metric-card">
+                <div class="metric-value"><span class="counter" data-target="1000">0</span>+</div>
+                <div class="metric-label">Active Users</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-value"><span class="counter" data-target="2000">0</span>+</div>
+                <div class="metric-label">AI Interactions</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-value"><span class="counter" data-target="8">0</span>+</div>
+                <div class="metric-label">Feedback Sessions</div>
+              </div>
+            </div>
 
             <div class="prob-sol-grid mb-30">
               <div class="inner-card">
@@ -116,268 +268,379 @@
               </div>
               <div class="inner-card highlight-border">
                 <h4>[ The Solution ]</h4>
-                <p>Developed AI-driven features including action extraction, prioritization, and adaptive scheduling. Exploring AI safety, trust, and alignment in emotionally responsive systems.</p>
+                <p>Developed AI-driven features including action extraction, prioritization, contextual scheduling, and adaptive planning to transform unstructured input into organized output.</p>
               </div>
             </div>
 
-            <h4 style="margin-bottom: 10px;">Technical Execution & Observations:</h4>
+            <h4 style="margin-bottom: 10px;">Key Contributions:</h4>
             <ul class="tech-list animated-list">
-              <li>Built the entire full-stack conversational system from the ground up.</li>
-              <li>Observed real-world user interaction patterns, including heavy reliance on AI for planning and guidance.</li>
+              <li>Led <strong>end-to-end product development</strong> — system design, feature implementation, testing, and deployment.</li>
+              <li>Designed and implemented features including <strong>task extraction, prioritization, and contextual scheduling</strong>.</li>
+              <li>Supported <strong>1,000+ users</strong> with intelligent automation for task management and productivity.</li>
+              <li>Processed <strong>2,000+ AI-assisted planning interactions</strong>, improving user decision-making.</li>
+              <li>Conducted <strong>8+ user feedback sessions</strong> to validate product assumptions and improve usability.</li>
             </ul>
+
+            <div class="project-tech-tags mt-20">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">AI Integration</span>
+            </div>
           </div>
 
-          <!-- DaySavvy Achievement Block attached specifically to the DaySavvy section -->
-          <div class="premium-card reveal-up tilt-card tech-glow span-2" style="background: rgba(0, 240, 255, 0.05); border-color: rgba(0, 240, 255, 0.3);">
+          <!-- DaySavvy Award Block -->
+          <div class="premium-card award-block reveal-up tilt-card">
             <div class="space-between" style="align-items: center;">
               <div>
                 <h3 class="gradient-text">Major Milestone</h3>
-                <p class="large-text" style="color: #fff;">2nd Best Project Award (DaySavvy) at Pre Event of AI Impact Summit 2026 at AMU.</p>
+                <p class="large-text" style="color: #fff;">🥈 2nd Best Project Award (DaySavvy) at Pre-Event of AI Impact Summit 2026 at AMU.</p>
               </div>
-              <div class="image-reveal" style="max-width: 300px; margin: 0;">
-                <img src="award.webp" alt="Award" loading="lazy">
+              <div class="image-reveal" style="max-width: 280px; margin: 0;">
+                <img src="award.webp" alt="DaySavvy Award" loading="lazy">
                 <div class="scanline"></div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- OTHER PROJECTS SECTION -->
+    <div class="section-divider"></div>
+
+    <!-- ═══════════════════════════════════
+         PROJECTS SECTION
+         ═══════════════════════════════════ -->
     <section class="section" id="projects">
       <div class="container">
         <div class="section-heading reveal-up">
-          <span class="mono-heading">// SYS.EXEC</span>
-          <h2>Other Technical Projects</h2>
+          <span class="mono-heading">// SYS.PROJECTS</span>
+          <h2>Technical Projects</h2>
         </div>
-        
-        <div class="projects-flex grid-2">
-          
+
+        <div class="projects-grid">
           <!-- DevOps Dashboard -->
-          <div class="premium-card reveal-up tech-glow mb-30">
+          <div class="premium-card reveal-up">
             <div class="card-header space-between">
               <div>
                 <h3>DevOps Status Dashboard</h3>
                 <p class="role-highlight">Developer</p>
               </div>
-              <div class="tech-badge"><span class="mono-label">Repo:</span> <a href="https://github.com/arhammalik21/Devops-status-dashboard.git" target="_blank">Devops-status-dashboard</a></div>
+              <div class="tech-badge"><span class="mono-label">Repo:</span> <a href="https://github.com/arhammalik21/Devops-status-dashboard.git" target="_blank">GitHub</a></div>
             </div>
             <ul class="tech-list mt-15 animated-list">
-              <li>Developed a real-time DevOps monitoring dashboard using Flask and psutil to track CPU, RAM, Disk, Network, and system process metrics.</li>
-              <li>Built responsive dashboard UI with JavaScript, HTML/CSS featuring live auto-refresh charts and historical trend sparklines.</li>
-              <li>Implemented REST APIs (/api/status, /health) for system telemetry and health monitoring.</li>
-              <li>Configured CI/CD pipeline using GitHub Actions → Docker Hub → AWS EC2 for automated build and deployment workflows.</li>
-              <li>Dockerized the application for portable deployment and scalable cloud hosting.</li>
-              <li>Integrated real-time monitoring with automated deployment practices aligned with DevOps workflows.</li>
+              <li>Developed a <strong>real-time system monitoring dashboard</strong> to track CPU, memory, disk, network, and process metrics.</li>
+              <li>Built RESTful APIs to expose health and telemetry data for operational visibility.</li>
+              <li>Designed responsive UI with <strong>automated updates</strong> for improved monitoring efficiency.</li>
+              <li>Implemented complete <strong>CI/CD pipeline</strong> using GitHub Actions → Docker → Docker Hub → AWS EC2.</li>
+              <li>Containerized the application using Docker for consistency across environments.</li>
+              <li>Applied DevOps best practices to improve deployment reliability and scalability.</li>
             </ul>
+            <div class="project-tech-tags mt-15">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">AWS EC2</span>
+              <span class="tech-tag">GitHub Actions</span>
+              <span class="tech-tag">REST APIs</span>
+            </div>
           </div>
 
-          <!-- GCP Badges -->
-          <div class="premium-card reveal-up tech-glow delay-1 mb-30">
+          <!-- Google Cloud Skill Boost -->
+          <div class="premium-card reveal-up delay-1">
             <div class="card-header space-between">
               <div>
                 <h3>Google Cloud Skill Boost</h3>
-                <p class="role-highlight">Badges</p>
+                <p class="role-highlight">Cloud Practitioner</p>
               </div>
             </div>
             <ul class="tech-list mt-15 animated-list">
-              <li>Earned multiple badges through hands-on labs in GCP Essentials, Identity & Access Management (IAM), Compute Engine (VM Instances), and Security & Secrets Management.</li>
-              <li>Developed practical skills in cloud deployment, access control, and infrastructure security within Google Cloud environments.</li>
+              <li>Earned <strong>multiple badges</strong> through hands-on labs covering IAM, Compute Engine, Security, and Cloud Fundamentals.</li>
+              <li>Developed practical skills in <strong>cloud deployment, access control, and infrastructure security</strong> within GCP environments.</li>
+              <li>Gained hands-on experience with <strong>VM instances, secrets management</strong>, and cloud-native workflows.</li>
             </ul>
+            <div class="project-tech-tags mt-15">
+              <span class="tech-tag">GCP</span>
+              <span class="tech-tag">IAM</span>
+              <span class="tech-tag">Compute Engine</span>
+              <span class="tech-tag">Security</span>
+            </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- SKILLS SECTION -->
+    <div class="section-divider"></div>
+
+    <!-- ═══════════════════════════════════
+         SKILLS SECTION
+         ═══════════════════════════════════ -->
     <section class="section" id="skills">
       <div class="container">
         <div class="section-heading text-center reveal-up">
           <span class="mono-heading">// SYS.MODULES</span>
-          <h2>Skills</h2>
+          <h2>Technical Skills</h2>
         </div>
-        
-        <!-- Marquee for Tech Animation -->
+
+        <!-- Tech Icon Marquee -->
         <div class="icon-marquee reveal-up">
           <div class="marquee-track">
             <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"></div>
             <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"></div>
             <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"></div>
+            <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"></div>
+            <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"></div>
             <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask"></div>
             <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"></div>
             <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS"></div>
             <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP"></div>
+            <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"></div>
+            <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"></div>
             <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"></div>
-            
+            <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"></div>
             <!-- Duplicated for seamless loop -->
             <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"></div>
             <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"></div>
             <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"></div>
+            <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"></div>
+            <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"></div>
             <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask"></div>
             <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"></div>
             <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS"></div>
             <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP"></div>
+            <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"></div>
+            <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"></div>
             <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"></div>
+            <div class="tech-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"></div>
           </div>
         </div>
 
-        <div class="grid-2 mt-30">
-          <div class="premium-card hover-glow reveal-up tech-card">
+        <!-- Skills Categories -->
+        <div class="skills-grid mt-30">
+          <div class="premium-card skill-category reveal-up">
             <div class="card-tech-border"></div>
-            <h3><span class="mono-label">_01.</span> Technical Skills</h3>
-            <ul class="tech-list mt-15 animated-list">
-              <li><strong>Languages:</strong> Python, JavaScript, TypeScript</li>
-              <li><strong>Web Development:</strong> HTML, CSS, Web Animation, Flask</li>
-              <li><strong>Cloud Platforms:</strong> Amazon Web Services (AWS), Google Cloud Platform (GCP)</li>
-              <li><strong>DevOps & Tools:</strong> Docker, Git, GitHub Actions, CI/CD</li>
-              <li><strong>Core Concepts:</strong> REST APIs, Cloud Deployment, Containerization</li>
-            </ul>
+            <h3><span class="cat-icon">⚡</span> Languages</h3>
+            <div class="skill-pills">
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">TypeScript</span>
+            </div>
           </div>
 
-          <div class="premium-card hover-glow reveal-up delay-1 tech-card flex-col">
+          <div class="premium-card skill-category reveal-up delay-1">
             <div class="card-tech-border"></div>
-            <h3><span class="mono-label">_02.</span> Languages</h3>
-            <ul class="tech-list mt-15 animated-list">
-              <li>English (Fluent)</li>
-              <li>Hindi (Fluent)</li>
-              <li>Urdu (Fluent)</li>
-            </ul>
+            <h3><span class="cat-icon">🎨</span> Frontend</h3>
+            <div class="skill-pills">
+              <span class="skill-pill">React.js</span>
+              <span class="skill-pill">React Flow</span>
+              <span class="skill-pill">Zustand</span>
+              <span class="skill-pill">HTML5</span>
+              <span class="skill-pill">CSS3</span>
+              <span class="skill-pill">Responsive Design</span>
+            </div>
+          </div>
+
+          <div class="premium-card skill-category reveal-up delay-2">
+            <div class="card-tech-border"></div>
+            <h3><span class="cat-icon">🔧</span> Backend</h3>
+            <div class="skill-pills">
+              <span class="skill-pill">Flask</span>
+              <span class="skill-pill">REST APIs</span>
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">Express.js</span>
+            </div>
+          </div>
+
+          <div class="premium-card skill-category reveal-up">
+            <div class="card-tech-border"></div>
+            <h3><span class="cat-icon">🗄️</span> Databases</h3>
+            <div class="skill-pills">
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">PostgreSQL</span>
+            </div>
+          </div>
+
+          <div class="premium-card skill-category reveal-up delay-1">
+            <div class="card-tech-border"></div>
+            <h3><span class="cat-icon">☁️</span> Cloud & DevOps</h3>
+            <div class="skill-pills">
+              <span class="skill-pill">AWS EC2</span>
+              <span class="skill-pill">GCP</span>
+              <span class="skill-pill">Docker</span>
+              <span class="skill-pill">GitHub Actions</span>
+              <span class="skill-pill">CI/CD</span>
+              <span class="skill-pill">Linux</span>
+            </div>
+          </div>
+
+          <div class="premium-card skill-category reveal-up delay-2">
+            <div class="card-tech-border"></div>
+            <h3><span class="cat-icon">💡</span> Core Concepts</h3>
+            <div class="skill-pills">
+              <span class="skill-pill">OOP</span>
+              <span class="skill-pill">SDLC</span>
+              <span class="skill-pill">Agile</span>
+              <span class="skill-pill">Version Control</span>
+              <span class="skill-pill">API Integration</span>
+              <span class="skill-pill">Cloud Deployment</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="premium-card reveal-up mt-30" style="max-width: 400px; margin-left: auto; margin-right: auto;">
+          <h3 style="text-align: center;"><span class="cat-icon">🌐</span> Languages</h3>
+          <div class="skill-pills" style="justify-content: center; margin-top: 14px;">
+            <span class="skill-pill">English (Fluent)</span>
+            <span class="skill-pill">Hindi (Fluent)</span>
+            <span class="skill-pill">Urdu (Fluent)</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- DEDICATED ACHIEVEMENTS & GALLERY SECTION -->
+    <div class="section-divider"></div>
+
+    <!-- ═══════════════════════════════════
+         ACHIEVEMENTS & GALLERY
+         ═══════════════════════════════════ -->
     <section class="section" id="achievements">
       <div class="container">
         <div class="section-heading text-center reveal-up">
           <span class="mono-heading">// ACHV.LOG</span>
           <h2>Achievements & Recognition</h2>
         </div>
-        
+
         <div class="grid-2 align-start">
-          
-          <!-- Image Carousel -->
-          <div class="premium-card tech-glow reveal-up p-0 overflow-hidden carousel-wrapper">
-            <div class="carousel-container">
-              <div class="carousel-slide active">
-                <img src="award.webp" alt="DaySavvy Award" loading="lazy">
-                <div class="carousel-caption"><span class="mono-label">AWARD:</span> DaySavvy 2nd Best Project</div>
-              </div>
-              <div class="carousel-slide">
-                <img src="leadership.webp" alt="Leadership Recognition" loading="lazy">
-                <div class="carousel-caption"><span class="mono-label">RECOGNITION:</span> Leadership & Excellence</div>
-              </div>
-              <div class="carousel-slide">
-                <img src="service.webp" alt="Achievement Photo 1" loading="lazy">
-                <div class="carousel-caption"><span class="mono-label">RECOGNITION:</span> Dedicated Service</div>
-              </div>
-              <div class="carousel-slide">
-                <img src="performance.webp" alt="Achievement Photo 2" loading="lazy">
-                <div class="carousel-caption"><span class="mono-label">RECOGNITION:</span> Outstanding Performance</div>
-              </div>
+          <!-- Achievement Photo 1 (Award Certificate) -->
+          <div class="premium-card p-0 overflow-hidden">
+            <div class="glow-wrap" style="background: #06060c; display: flex; align-items: center; justify-content: center; height: 320px;">
+              <img class="achievement-img" src="award.webp" alt="DaySavvy 2nd Best Project Award">
+              <div class="scanline"></div>
             </div>
-            <div class="scanline"></div>
+            <div style="padding: 20px;">
+              <span class="mono-label">AWARD & MILESTONE</span>
+              <h3 style="font-size: 1.15rem; margin-top: 6px; margin-bottom: 0;">DaySavvy 2nd Best Project Award</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">Pre-Event of AI Impact Summit 2026 at AMU</p>
+            </div>
           </div>
 
-          <!-- Achievement List -->
-          <div class="flex-col gap-20">
-            <div class="premium-card hover-glow reveal-up flex-center tech-achv">
-              <span class="big-emoji">🥈</span>
-              <p>2nd Best Project Award (DaySavvy) at Pre Event of AI Impact Summit 2026 at AMU</p>
+          <!-- Achievement Photo 2 (Leadership Photo) -->
+          <div class="premium-card p-0 overflow-hidden">
+            <div class="glow-wrap" style="background: #06060c; display: flex; align-items: center; justify-content: center; height: 320px;">
+              <img class="achievement-img" src="leadership.webp" alt="Leadership & Excellence Recognition">
+              <div class="scanline"></div>
             </div>
-            <div class="premium-card hover-glow reveal-up delay-1 flex-center tech-achv">
-              <span class="big-emoji">🏅</span>
-              <p>AWS ETC Digital Badge</p>
-            </div>
-            <div class="premium-card hover-glow reveal-up delay-2 flex-center tech-achv">
-              <span class="big-emoji">🏆</span>
-              <p>HackerRank certificates</p>
-            </div>
-            <div class="premium-card hover-glow reveal-up delay-3 flex-center tech-achv">
-              <span class="big-emoji">🏀</span>
-              <p>Basketball tournament winner</p>
+            <div style="padding: 20px;">
+              <span class="mono-label">LEADERSHIP RECOGNITION</span>
+              <h3 style="font-size: 1.15rem; margin-top: 6px; margin-bottom: 0;">Machine Learning Club Leadership</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">General Secretary & Executive Recognition</p>
             </div>
           </div>
-          
+
+          <!-- Achievement Photo 3 (Service Certificate) -->
+          <div class="premium-card p-0 overflow-hidden">
+            <div class="glow-wrap" style="background: #06060c; display: flex; align-items: center; justify-content: center; height: 320px;">
+              <img class="achievement-img" src="service.webp" alt="Dedicated Service Recognition">
+              <div class="scanline"></div>
+            </div>
+            <div style="padding: 20px;">
+              <span class="mono-label">COMMUNITY SERVICE</span>
+              <h3 style="font-size: 1.15rem; margin-top: 6px; margin-bottom: 0;">Secretary IT & Operations</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">Sulaiman Hall (AMU) IT Management</p>
+            </div>
+          </div>
+
+          <!-- Achievement Photo 4 (Performance Award Photo) -->
+          <div class="premium-card p-0 overflow-hidden">
+            <div class="glow-wrap" style="background: #06060c; display: flex; align-items: center; justify-content: center; height: 320px;">
+              <img class="achievement-img" src="performance.webp" alt="Outstanding Performance">
+              <div class="scanline"></div>
+            </div>
+            <div style="padding: 20px;">
+              <span class="mono-label">PERFORMANCE RECOGNITION</span>
+              <h3 style="font-size: 1.15rem; margin-top: 6px; margin-bottom: 0;">Outstanding Performance Award</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">Excellence in Full-Stack & DevOps Projects</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Achievement Badges Grid -->
+        <div class="grid-2 mt-30">
+          <div class="premium-card flex-center tech-achv reveal-up">
+            <span class="big-emoji">💼</span>
+            <div>
+              <strong style="color: #fff; display: block;">TechTrail DMC PPO Offer</strong>
+              <p style="font-size: 0.88rem; margin: 0;">Converted Full Stack Developer & DevOps Internship to Full-Time role</p>
+            </div>
+          </div>
+          <div class="premium-card flex-center tech-achv reveal-up delay-1">
+            <span class="big-emoji">☁️</span>
+            <div>
+              <strong style="color: #fff; display: block;">Google Cloud Skill Boost Badges</strong>
+              <p style="font-size: 0.88rem; margin: 0;">IAM, Compute Engine, Security & Cloud Fundamentals</p>
+            </div>
+          </div>
+          <div class="premium-card flex-center tech-achv reveal-up">
+            <span class="big-emoji">🏅</span>
+            <div>
+              <strong style="color: #fff; display: block;">AWS ETC Digital Badge</strong>
+              <p style="font-size: 0.88rem; margin: 0;">Certified cloud technical skill badge</p>
+            </div>
+          </div>
+          <div class="premium-card flex-center tech-achv reveal-up delay-1">
+            <span class="big-emoji">🏀</span>
+            <div>
+              <strong style="color: #fff; display: block;">Basketball Championship Winner</strong>
+              <p style="font-size: 0.88rem; margin: 0;">Captain & winner of Inter-Hall Basketball Tournaments</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE & LEADERSHIP SECTION -->
-    <section class="section" id="experience">
+    <div class="section-divider"></div>
+
+    <!-- ═══════════════════════════════════
+         EDUCATION
+         ═══════════════════════════════════ -->
+    <section class="section" id="education">
       <div class="container">
-        <div class="grid-2">
-          
-          <!-- Experience & Leadership -->
-          <div class="timeline-wrap">
-            <div class="section-heading reveal-up">
-              <span class="mono-heading">// LEAD.EXEC</span>
-              <h2>Leadership & Experience</h2>
-            </div>
-            <div class="premium-card reveal-up tech-glow">
-              <ul class="clean-timeline tech-timeline animated-list">
-                <li>
-                  <h4>Full Stack Developer cum DevOps Intern</h4>
-                  <span class="date">> TechTrail DMC, AMUIF</span>
-                </li>
-                <li>
-                  <h4>General Secretary (2026)</h4>
-                  <span class="date">> Machine Learning Club, ZHCET</span>
-                  <p>led AI/ML initiatives and campus tech engagement.</p>
-                </li>
-                <li>
-                  <h4>Secretary IT (2025)</h4>
-                  <span class="date">> Sulaiman Hall (AMU)</span>
-                  <p>managed IT initiatives and event operations.</p>
-                </li>
-                <li>
-                  <h4>Captain Basketball (2026)</h4>
-                  <span class="date">> Sulaiman Hall (AMU)</span>
-                  <p>led the basketball team and organized tournaments.</p>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div class="section-heading text-center reveal-up">
+          <span class="mono-heading">// DATA.EDUCATION</span>
+          <h2>Educational Background</h2>
+        </div>
 
-          <!-- Educational Background -->
-          <div class="timeline-wrap" id="education">
-            <div class="section-heading reveal-up delay-1">
-              <span class="mono-heading">// DATA.EDU</span>
-              <h2>Educational Background</h2>
-            </div>
-            <div class="premium-card reveal-up delay-1 tech-glow">
-              <ul class="clean-timeline tech-timeline animated-list">
-                <li>
-                  <h4>Bachelor of Technology (Electrical Engineering)</h4>
-                  <span class="date">> Aligarh Muslim University, Aligarh — 2023 to 2027</span>
-                </li>
-                <li>
-                  <h4>Senior Secondary School (12th)</h4>
-                  <span class="date">> SHSSS (+2 Boys), AMU, Aligarh — 2023</span>
-                </li>
-                <li>
-                  <h4>High School (10th)</h4>
-                  <span class="date">> STS School (Minto Circle), AMU, Aligarh — 2021</span>
-                </li>
-              </ul>
-            </div>
+        <div style="max-width: 700px; margin: 0 auto;">
+          <div class="premium-card reveal-up">
+            <ul class="clean-timeline animated-list">
+              <li>
+                <h4>Bachelor of Technology (Electrical Engineering)</h4>
+                <span class="date">> Aligarh Muslim University, Aligarh — 2023 to 2027</span>
+              </li>
+              <li>
+                <h4>Senior Secondary School (12th)</h4>
+                <span class="date">> SHSSS (+2 Boys), AMU, Aligarh — 2023</span>
+              </li>
+              <li>
+                <h4>High School (10th)</h4>
+                <span class="date">> STS School (Minto Circle), AMU, Aligarh — 2021</span>
+              </li>
+            </ul>
           </div>
-
         </div>
       </div>
     </section>
   </main>
 
+  <!-- ═══ FOOTER ═══ -->
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-left reveal-up">
-        <span class="mono-heading">// SYS.COMM</span>
-        <h2>Let's Connect</h2>
-        <p>Open to collaborations in cloud engineering, AI safety, and full-stack development.</p>
+        <span class="mono-heading">// SYS.CONNECT</span>
+        <h2>Let's Build Together</h2>
+        <p>Open to collaborations in full-stack development, cloud engineering, AI-powered products, and DevOps workflows.</p>
       </div>
       <div class="footer-right reveal-up delay-1">
         <a href="https://linkedin.com/in/arham-malik-722335312/" target="_blank" class="social-btn magnetic-btn">
@@ -386,10 +649,13 @@
         <a href="https://github.com/arhammalik21" target="_blank" class="social-btn magnetic-btn">
           <span class="mono-label">REPO:</span> GitHub
         </a>
+        <a href="mailto:arhammaliksg@gmail.com" class="social-btn magnetic-btn">
+          <span class="mono-label">MAIL:</span> Email
+        </a>
       </div>
     </div>
-    <div class="copyright text-center">
-      <p>SYS_END // © 2026 Arham Malik — Founder & Developer</p>
+    <div class="copyright">
+      <p>SYS_END // © 2026 Arham Malik — Founder · Full-Stack Developer · DevOps Engineer</p>
     </div>
   </footer>
 
